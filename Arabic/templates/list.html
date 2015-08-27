@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+Current lang: {{ lang }}
+<br>
+
+{% for item in list %}
+    {% if lang == 'ar' %}
+        <h3>{{ item.title_ar }}</h3>
+        <p>{{ item.info_ar }}</p>
+
+    {% elif lang == 'en' %}
+        <h3>{{ item.title_en }}</h3>
+        <p>{{ item.info_en }}</p>
+
+    {% endif %}
+
+    <br>
+{% endfor %}
+
+</body>
+</html>
